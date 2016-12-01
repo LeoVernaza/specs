@@ -1,32 +1,36 @@
 {
-  "authors": "Google, Inc.",
-  "dependencies": {
-    "GoogleInterchangeUtilities": "~> 1.2",
-    "GoogleToolboxForMac/NSData+zlib": "~> 2.1"
-  },
-  "description": "Firebase Core includes FIRApp and FIROptions which provide central configuration for other Firebase services.",
-  "frameworks": [
-    "SystemConfiguration"
-  ],
-  "homepage": "https://firebase.google.com",
-  "libraries": [
-    "c++"
-  ],
+  "name": "Firebase",
+  "version": "2.4.0",
+  "summary": "The official iOS client library for Firebase.",
+  "description": "This is the official iOS client library for Firebase. Build extraordinary native iOS apps in minutes with Firebase. The Firebase platform can power your app’s backend, user authentication, static hosting, and more.",
+  "homepage": "https://www.firebase.com/",
   "license": {
-    "text": "Copyright 2016 Google",
-    "type": "Copyright"
+    "type": "Commercial",
+    "text": "https://www.firebase.com/terms/terms-of-service.html"
   },
-  "name": "FirebaseCore",
+  "authors": {
+    "Firebase": "support@firebase.com"
+  },
+  "source": {
+    "http": "https://cdn.firebase.com/ObjC/Firebase.framework-2.4.0.zip"
+  },
   "platforms": {
     "ios": "7.0",
     "tvos":"9.0"
   },
-  "source": {
-    "http": "https://dl.google.com/dl/cpdc/23ffbc519fdeb8d5/FirebaseCore-3.4.5.tar.gz"
-  },
-  "summary": "Firebase Core for iOS",
-  "vendored_frameworks": [
-    "Frameworks/frameworks/FirebaseCore.framework"
+  "vendored_frameworks": "Firebase.framework",
+  "frameworks": [
+    "CFNetwork",
+    "Security",
+    "Firebase",
+    "SystemConfiguration"
   ],
-  "version": "3.4.5"
+  "libraries": [
+    "icucore",
+    "c++"
+  ],
+  "requires_arc": true,
+  "xcconfig": {
+    "FRAMEWORK_SEARCH_PATHS": "\"$(PODS_ROOT)/Firebase\""
+  }
 }
