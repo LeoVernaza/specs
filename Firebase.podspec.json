@@ -19,6 +19,7 @@
     "tvos":"9.0"
   },
   "vendored_frameworks": "Firebase.framework",
+  "public_header_files": "Firebase.framework/Headers/*.h",
   "frameworks": [
     "CFNetwork",
     "Security",
